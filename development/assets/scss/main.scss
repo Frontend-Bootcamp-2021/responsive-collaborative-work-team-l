@@ -5,22 +5,146 @@
 @import './header';
 @import './base';
 @import './home';
+.customers-reviews {
+    width: 120%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .reviews-intro {
+        text-align: center;
+        margin: 1rem 0;
+        h2 {
+            margin: 1rem 0;
+            @include font-size(35);
+        }
+        p {
+            color: $grey-font-color;
+        }
+    }
+    &__cards {
+        width: 90%;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            ;
+        }
+        .review-card {
+            border: 2px solid $very-light-grey-color;
+            border-radius: 10px;
+            padding: 2rem;
+            width: calc(30%);
+            &--active {
+                border-color: $orange-background-color;
+            }
+            @media (max-width: $tablet) {
+                width: 80%;
+                margin: 0 auto 2rem;
+            }
+            @media (max-width: $mobile) {
+                width: 90%;
+                margin: 0 auto 2rem;
+            }
+            .review-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+                &-container {
+                    display: flex;
+                    align-items: center;
+                    .review-author {
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 0.6rem;
+                        h5 {
+                            padding-bottom: 0.4rem;
+                        }
+                    }
+                }
+            }
+            .review-description {
+                @include font-size(16);
+            }
+        }
+    }
+    &__navigation {
+        width: 90%;
+        margin: 0.5rem auto 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            width: 100%;
+        }
+        .customers-reviews__navigation-container {
+            width: 50%;
+            @media (max-width: $mobile) {
+                width: 100%;
+            }
+            div {
+                width: 20%;
+                display: flex;
+                justify-content: space-around;
+                @media (max-width: $tablet) {
+                    width: 50%;
+                }
+                @media (max-width: $mobile) {
+                    width: 100%;
+                }
+                .nav-active-circle {
+                    width: 41px;
+                    height: 15px;
+                    background-color: $orange-background-color;
+                    border-radius: 25px;
+                }
+                .nav-grey-cricle {
+                    background-color: $dark-grey-background-color;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .nav-arrows {
+            display: flex;
+            width: max-content;
+            align-items: flex-end;
+            img:last-of-type {
+                position: relative;
+                bottom: -54px !important;
+            }
+            @media (max-width: $mobile) {
+                width: 100%;
+                justify-content: center;
+                img:last-of-type {
+                    position: relative;
+                    bottom: -56px !important;
+                    left: 30px;
+                }
+            }
+        }
+    }
+}
 
 .map-section {
     width: 100%;
     text-align: center;
-
     h2 {
         @include font-size(35);
         margin-bottom: 1rem;
         font-weight: 500;
     }
-
     p {
         @include font-size();
         margin-bottom: 5rem;
         color: $grey-font-color;
-        
         @media (max-width: $tablet) {
             & {
                 margin-bottom: 0;
@@ -28,10 +152,11 @@
             }
         }
     }
-
     svg {
         max-width: 100%;
-        max-height: 300px;
+        @media (max-width: tablet) {
+            max-height: 300px;
+        }
     }
 }
 
@@ -60,7 +185,6 @@
             height: 90px;
             width: 90px;
         }
-
         & img:last-of-type {
             column-span: all;
         }
@@ -71,11 +195,9 @@ footer {
     margin: 8rem auto 0;
     background-color: $grey-background-color;
     width: 100%;
-
     @media (max-width: $mobile) {
-        margin: 1rem 0;        
+        margin: 1rem 0;
     }
-
     .footer__subscribe {
         width: 80%;
         margin: 0 auto;
@@ -83,7 +205,6 @@ footer {
         top: -122px;
         background-color: $light-orange-background-color;
         border-radius: 10px;
-
         @media (max-width: $desktop) {
             width: 95%;
         }
@@ -92,7 +213,6 @@ footer {
             text-align: center;
             padding: 1rem 0;
         }
-
         &-container {
             width: 85%;
             margin: 0 auto;
@@ -100,28 +220,23 @@ footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             @media (max-width: $desktop) {
                 width: 95%;
             }
-
             @media (max-width: $tablet) {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
             }
-
             h3 {
                 @include font-size(35);
             }
-
             p {
                 color: $grey-font-color;
             }
-
             button {
                 background-color: $orange-background-color;
-                box-shadow: 0px 6px 29px 7px  $orange-box-shadow-color;
+                box-shadow: 0px 6px 29px 7px $orange-box-shadow-color;
                 width: 302px;
                 height: 76px;
                 border-radius: 12px;
@@ -129,19 +244,16 @@ footer {
                 color: $white-background-color;
                 font-weight: 700;
                 @include font-size(16);
-
                 &:hover {
                     cursor: pointer;
                     background-color: $light-orange-button-background-color;
                 }
-
                 @media (max-width: $tablet) {
                     margin: 3rem 0;
                 }
             }
         }
     }
-
     .footer-container {
         width: 70%;
         margin: 0 auto;
@@ -149,29 +261,23 @@ footer {
         background-color: $grey-background-color;
         display: flex;
         justify-content: space-between;
-
         div {
             padding: 1rem 0;
         }
-
         @media (max-width: $desktop) {
             width: 95%;
         }
-
         @media (max-width: $tablet) {
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
-
-
     }
     .footer__left {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 50%;
-
         .footer__left__logo-description {
             @include font-size(20);
             font-weight: 500;
@@ -180,62 +286,52 @@ footer {
             justify-content: space-between;
             width: 150px;
         }
-
         .footer__social-icons {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-
             ul {
                 display: flex;
                 position: relative;
                 left: -18px;
             }
-
             p {
                 color: $light-grey-font-color;
                 @include font-size(19);
             }
-
             img {
                 user-select: none;
                 &:hover {
                     cursor: pointer;
                 }
             }
-
             @media (max-width: $tablet) {
                 width: 50%;
                 margin: 0 auto;
                 align-items: center;
             }
-    
         }
-        
         @media (max-width: $tablet) {
             width: 100%;
         }
-
     }
-    
     .footer__right {
         display: flex;
         justify-content: space-between;
         width: 50%;
-        
+        h4 {
+            margin-bottom: 1rem;
+        }
         li {
             padding: 1rem 0;
             color: $grey-font-color;
-    
             &:hover {
                 cursor: pointer;
             }
         }
-
         @media (max-width: $tablet) {
             width: 90%;
         }
-
     }
 }
