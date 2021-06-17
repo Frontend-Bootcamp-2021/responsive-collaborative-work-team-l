@@ -1,1 +1,46 @@
-.header {}
+.ShowCase{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color:$white-background-color;
+	line-height: 1.6;
+
+	&__container {
+		background-color:$white-background-color;
+		color:$black-font-color;
+		height: 550px;
+		padding: 15px 25px;
+		h1{
+			color:$color-link;
+			font:$header-font
+		}
+	&__container-links{
+		display:flex;
+		align-self: center;
+		justify-self: space-between;
+		ul{ 
+			display: flex;
+			list-style: none;
+			li{
+				padding: 15px;
+			}
+			max-width: 1000px;
+			margin:0 auto;
+			overflow: hidden;
+		}
+	}
+		a{
+			color:$color-link;
+			text-decoration: none;
+}
+	}
+&__Main-header{
+	height: 550px;
+	display:flex;
+	align-self: center;
+	justify-self: center;
+
+
+}
+}
+
