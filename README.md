@@ -7,5 +7,5 @@ clone then run:
 ## The template
 Figma: https://www.figma.com/file/YISG57EpMwQ9HF6eIcY0iT/Homework?node-id=0%3A1
 
-##Contributors:
+## Contributors:
 Yusuf Sabbag, Nurgeldi Atamyradov, Dana Alhameed.
