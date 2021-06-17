@@ -1,9 +1,11 @@
 # responsive-template
 
-Projeyi çalıştırmak için;
+clone then run:
 `parcel serve ./development/index.njk`
+(make sure to have parcel installed on your machine)
 
-## Tasarımlar
+## The template
 Figma: https://www.figma.com/file/YISG57EpMwQ9HF6eIcY0iT/Homework?node-id=0%3A1
 
-Tasarımları inceleyebilmek için Figma ya ücretsiz kayıt olmanız gerekiyor.
+##Contributors:
+Yusuf Sabbag, Nurgeldi Atamyradov, Dana Alhameed.
